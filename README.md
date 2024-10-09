@@ -62,8 +62,19 @@ The F1 score is crucial in this context as it provides a balanced measure of mod
 - **User Interface Development**: Consider developing a user-friendly interface (e.g., a web app) for emergency responders to easily input messages and receive instant classifications, improving real-time decision-making.
 
 ## 8. Known Issues (Work in Progress)
-- **Long Training Times**: The training process is significantly prolonged due to the nature of the data and the computational demands of the Random Forest classifier.
+Long Training Times: The Random Forest classifier demands significant computational resources, leading to prolonged training periods.
 
+Data Quality and Representativeness: Model performance is heavily dependent on the quality of the training data. Poor representation of real-world scenarios can degrade accuracy.
+
+Cultural and Linguistic Variations: Colloquialisms, slang, and language-specific nuances in messages can impact classification, necessitating a diverse training dataset.
+
+Imbalanced Data Challenges: Despite using techniques like undersampling and SMOTE, the model may still struggle with classifying minority categories effectively.
+
+Model Overfitting: There’s a risk of overfitting due to model complexity and training data volume, which can be mitigated through regularization and cross-validation.
+
+Real-time Processing Limitations: The current setup may not be optimized for real-time message processing, affecting response times in urgent situations.
+
+Scalability: Increased message volume could challenge the pipeline's scalability, risking performance degradation.
 ## 9. Conclusion
 This pipeline aims to enhance the effectiveness of emergency response systems by accurately classifying urgent messages. Continuous improvements, particularly in handling imbalanced data and optimizing model training times, are essential for achieving the desired outcomes.
 
