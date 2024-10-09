@@ -69,7 +69,7 @@ Real-time Processing Limitations: The current setup may not be optimized for rea
   - Helps the model perform better in minority classes (e.g., critical emergencies) without sacrificing performance in majority classes.
   - Maintains or increases the overall dataset size, which is particularly beneficial for complex NLP tasks.
  
-- ** Making a Python script to run the model from rather than simply a notebook to convey ideas and let it be actionable.
+-  Making a Python script to run the model from rather than simply a notebook to convey ideas and let it be actionable.
 
 - **Real-time Monitoring and Updates**: Implement a monitoring system to evaluate model performance on new data over time. This can help identify when model retraining is necessary and ensure the system remains effective as language and communication patterns evolve.
 
