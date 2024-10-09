@@ -9,10 +9,9 @@
 5. [Experimentation with Undersampling](#experimentation-with-undersampling)
 6. [Why Excessive Hyperparameter Tuning Can Lead to Poorer Results](#why-excessive-hyperparameter-tuning-can-lead-to-poorer-results)
 7. [Importance of F1 Score in NLP](#importance-of-f1-score-in-nlp-especially-with-imbalanced-data)
-8. [Recommendations for Improvement](#recommendations-for-improvement)
-9. [Known Issues (Work in Progress)](#known-issues-work-in-progress)
+8. [Known Issues (Work in Progress)](#known-issues-work-in-progress)
+9. [Recommendations for Improvement](#recommendations-for-improvement)
 10. [Conclusion](#conclusion)
-11. [Limitations](#limitations)
 12. [Installation](#installation)
 
 ## Overview
@@ -49,19 +48,7 @@ Undersampling was performed using criteria proportional to the actual original c
 ## 6. Importance of F1 Score in NLP, Especially with Imbalanced Data
 The F1 score is crucial in this context as it provides a balanced measure of model performance, especially in imbalanced data scenarios. It accounts for both precision and recall, ensuring that the model performs well on minority classes, which are often critical in disaster response. Minimizing false positives and false negatives is essential in emergency contexts.
 
-## 7. Recommendations for Improvement
-- **Use SMOTE Oversampling**:
-  - Preserves valuable majority class data.
-  - Generates synthetic data for minority classes, enhancing generalization.
-  - Reduces the risk of overfitting compared to traditional oversampling.
-  - Helps the model perform better in minority classes (e.g., critical emergencies) without sacrificing performance in majority classes.
-  - Maintains or increases the overall dataset size, which is particularly beneficial for complex NLP tasks.
-
-- **Real-time Monitoring and Updates**: Implement a monitoring system to evaluate model performance on new data over time. This can help identify when model retraining is necessary and ensure the system remains effective as language and communication patterns evolve.
-
-- **User Interface Development**: Consider developing a user-friendly interface (e.g., a web app) for emergency responders to easily input messages and receive instant classifications, improving real-time decision-making.
-
-## 8. Known Issues (Work in Progress)
+## 7. Known Issues (Work in Progress)
 Long Training Times: The Random Forest classifier demands significant computational resources, leading to prolonged training periods.
 
 Data Quality and Representativeness: Model performance is heavily dependent on the quality of the training data. Poor representation of real-world scenarios can degrade accuracy.
@@ -74,18 +61,23 @@ Model Overfitting: There’s a risk of overfitting due to model complexity and t
 
 Real-time Processing Limitations: The current setup may not be optimized for real-time message processing, affecting response times in urgent situations.
 
-Scalability: Increased message volume could challenge the pipeline's scalability, risking performance degradation.
+## 8. Recommendations for Improvement
+- **Use SMOTE Oversampling**:
+  - Preserves valuable majority class data.
+  - Generates synthetic data for minority classes, enhancing generalization.
+  - Reduces the risk of overfitting compared to traditional oversampling.
+  - Helps the model perform better in minority classes (e.g., critical emergencies) without sacrificing performance in majority classes.
+  - Maintains or increases the overall dataset size, which is particularly beneficial for complex NLP tasks.
+
+- **Real-time Monitoring and Updates**: Implement a monitoring system to evaluate model performance on new data over time. This can help identify when model retraining is necessary and ensure the system remains effective as language and communication patterns evolve.
+
+- **User Interface Development**: Consider developing a user-friendly interface (e.g., a web app) for emergency responders to easily input messages and receive instant classifications, improving real-time decision-making.
+
 ## 9. Conclusion
 This pipeline aims to enhance the effectiveness of emergency response systems by accurately classifying urgent messages. Continuous improvements, particularly in handling imbalanced data and optimizing model training times, are essential for achieving the desired outcomes.
 
-## 10. Limitations
-- **Data Quality**: The accuracy of the classification relies heavily on the quality and representativeness of the training data. If the dataset does not reflect real-world scenarios, the model's performance may degrade.
 
-- **Cultural and Linguistic Variations**: Messages may contain colloquialisms, slang, or language-specific nuances that could impact classification accuracy. Ongoing efforts to diversify training data across different languages and dialects are essential.
-
-- **Imbalanced Data Challenges**: Although undersampling and SMOTE are recommended to handle imbalanced data, challenges may remain. Continuous evaluation and adaptation of strategies are necessary to ensure effective classification of all categories.
-
-## 11. Installation
+## 10. Installation
 To set up this project, clone the repository and install the required libraries:
 
 ```bash
