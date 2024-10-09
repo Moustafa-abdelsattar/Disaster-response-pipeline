@@ -12,14 +12,8 @@
 8. [Recommendations for Improvement](#recommendations-for-improvement)
 9. [Known Issues (Work in Progress)](#known-issues-work-in-progress)
 10. [Conclusion](#conclusion)
-11. [Installation](#installation)
-12. [Usage](#usage)
-13. [Contributing](#contributing)
-14. [License](#license)
-15. [Acknowledgements](#acknowledgements)
-16. [Contact](#contact)
-17. [Future Work](#future-work)
-18. [Impact](#impact)
+11. [Limitations](#limitations)
+12. [Installation](#installation)
 
 ## Overview
 This project involves developing an ETL and machine learning pipeline designed to classify messages from various sources such as social media, SMS, and emergency hotlines. The goal is to categorize these messages into predefined emergency categories, ensuring that critical information quickly reaches the relevant response teams.
@@ -63,13 +57,24 @@ The F1 score is crucial in this context as it provides a balanced measure of mod
   - Helps the model perform better in minority classes (e.g., critical emergencies) without sacrificing performance in majority classes.
   - Maintains or increases the overall dataset size, which is particularly beneficial for complex NLP tasks.
 
+- **Real-time Monitoring and Updates**: Implement a monitoring system to evaluate model performance on new data over time. This can help identify when model retraining is necessary and ensure the system remains effective as language and communication patterns evolve.
+
+- **User Interface Development**: Consider developing a user-friendly interface (e.g., a web app) for emergency responders to easily input messages and receive instant classifications, improving real-time decision-making.
+
 ## 8. Known Issues (Work in Progress)
 - **Long Training Times**: The training process is significantly prolonged due to the nature of the data and the computational demands of the Random Forest classifier.
 
 ## 9. Conclusion
 This pipeline aims to enhance the effectiveness of emergency response systems by accurately classifying urgent messages. Continuous improvements, particularly in handling imbalanced data and optimizing model training times, are essential for achieving the desired outcomes.
 
-## 10. Installation
+## 10. Limitations
+- **Data Quality**: The accuracy of the classification relies heavily on the quality and representativeness of the training data. If the dataset does not reflect real-world scenarios, the model's performance may degrade.
+
+- **Cultural and Linguistic Variations**: Messages may contain colloquialisms, slang, or language-specific nuances that could impact classification accuracy. Ongoing efforts to diversify training data across different languages and dialects are essential.
+
+- **Imbalanced Data Challenges**: Although undersampling and SMOTE are recommended to handle imbalanced data, challenges may remain. Continuous evaluation and adaptation of strategies are necessary to ensure effective classification of all categories.
+
+## 11. Installation
 To set up this project, clone the repository and install the required libraries:
 
 ```bash
