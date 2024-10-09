@@ -77,4 +77,3 @@ git clone https://github.com/yourusername/your-repo.git
 cd your-repo
 pip install -r requirements.txt
 
-C:\Anaconda3\disaster_project\Lib\site-packages\sklear
