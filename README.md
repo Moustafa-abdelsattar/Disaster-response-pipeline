@@ -83,7 +83,7 @@ This pipeline aims to enhance the effectiveness of emergency response systems by
 To set up this project, clone the repository and install the required libraries:
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/Moustafa-abdelsattar/Disaster-response-pipeline.git
+cd Disaster-response-pipeline
 pip install -r requirements.txt
 
